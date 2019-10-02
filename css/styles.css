@@ -11,6 +11,7 @@ body {
     display: flex;
     align-content: center;
     margin-top: 10%;
+    margin-bottom: 10%;
 }
 
 #side-nav {
