@@ -1,0 +1,48 @@
+body {
+    background-image: url("http://7wallpapers.net/wp-content/uploads/19_Pizza.jpg");
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#main-content {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    border:1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    display: flex;
+    align-content: center;
+    margin-top: 10%;
+}
+
+#side-nav {
+    padding-right: 5%;
+    display: block;
+    text-align: center;
+    padding: 5px;
+}
+
+#logo {
+    max-width: 100%;
+    height: auto;
+}
+
+li {
+    list-style: none;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+#main {
+    padding-left: 5%;
+    border-left: 1px solid black;
+}
+
+.overlay {
+    position: relative;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    transition: .5s ease;
+    height: 100%;
+    opacity: 1;
+  }
