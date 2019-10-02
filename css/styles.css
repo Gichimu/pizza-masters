@@ -1,4 +1,5 @@
 body {
+    font-family: 'Satisfy', serif;
     background-image: url("http://7wallpapers.net/wp-content/uploads/19_Pizza.jpg");
     color: rgba(0, 0, 0, 0.5);
 }
@@ -26,14 +27,35 @@ body {
     height: auto;
 }
 
+.content {
+    padding: 5%;
+    font-size: 1.5em;
+}
+
+h3, #menu li {
+    font-family: 'Comfortaa', serif;
+}
+
+p {
+    
+}
+
 ul {
     padding: 5%;
 }
 
-li {
+#menu li {
     list-style: none;
-    padding: 5px;
+    padding: 5%;
     text-transform: uppercase;
+}
+
+#pizzas li {
+    list-style: none;
+}
+
+#menu li:hover {
+    text-decoration: #f1f1f1 underline;
 }
 
 #main {
