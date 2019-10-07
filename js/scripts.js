@@ -39,24 +39,7 @@ $(document).ready(function(){
 
 
     //Business logic
-    /*var Pizza = {
-        size : {
-            small : 100,
-            medium : 200,
-            large : 300
-        },
-        crust : {
-            regular : 0,
-            extra_crust : 200,
-            vegetarian : 300
-        },
-        toppings : {
-            extra_tomato : 200,
-            extra_cheese : 300,
-            veggie : 400
-        }
-    }*/
-
+   
     function Pizza (size, crust, quantity, toppings){
         this.size = size;
         this.crust = crust;
@@ -71,17 +54,6 @@ $(document).ready(function(){
         var toppings = 0;
         var cost = 0;
         
-
-        /*if ($('#inlineCheckbox1').is(":checked"))
-        {
-            toppings = "extra_tomato";
-        }else if($('#inlineCheckbox2').is(":checked")){
-            toppings = "extra_cheese";
-        }else if($('#inlineCheckbox3').is(":checked")){
-            toppings = "veggie";
-        }else{
-            toppings = "";
-        }*/
 
         
         var price = 0;
