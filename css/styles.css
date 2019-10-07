@@ -51,12 +51,13 @@ ul {
     text-transform: uppercase;
 }
 
-#pizzas li {
-    list-style: none;
+li a {
+    color: white;
 }
 
 #menu li:hover {
     text-decoration: #f1f1f1 underline;
+    color: white;
 }
 
 #main {

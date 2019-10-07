@@ -23,9 +23,7 @@ $(document).ready(function(){
         var inputQuantity = $("input#quantity").val();
         var inputToppings = "";
 
-        /*$.each($("input[type='checkbox']:checked"), function(){
-            inputToppings.push($(this).val());
-        });*/
+        
 
         var newPizza = new Pizza(inputSize, inputCrust, inputQuantity, inputToppings)
         
@@ -70,10 +68,11 @@ $(document).ready(function(){
         var size = $("select#inputState1").val();
         var crust = $("select#inputState2").val();
         var quantity = $("input#quantity").val();
-        var toppings = "";
+        var toppings = 0;
+        var cost = 0;
         
 
-        if ($('#inlineCheckbox1').is(":checked"))
+        /*if ($('#inlineCheckbox1').is(":checked"))
         {
             toppings = "extra_tomato";
         }else if($('#inlineCheckbox2').is(":checked")){
@@ -82,8 +81,9 @@ $(document).ready(function(){
             toppings = "veggie";
         }else{
             toppings = "";
-        }
+        }*/
 
+        
         var price = 0;
         var delivery = false;
 
@@ -94,79 +94,54 @@ $(document).ready(function(){
             delivery = false; 
         }
 
-        if((size === "small")&&(crust === "regular")&&(toppings === "extra_tomato")){
+        if((size === "small")&&(crust === "regular")){
+            price = 100;
+        
+        }else if((size === "small")&&(crust === "extra_crust")){
             price = 300;
-        }else if((size === "small")&&(crust === "regular")&&(toppings === "extra_cheese")){
+        
+        }else if((size === "small")&&(crust === "vegetarian")){
             price = 400;
-        }else if((size === "small")&&(crust === "regular")&&(toppings === "veggie")){
-            price = 500;
-        }else if((size === "small")&&(crust === "extra_crust")&&(toppings === "extra_tomato")){
-            price = 500;
-        }else if((size === "small")&&(crust === "extra_crust")&&(toppings === "extra_cheese")){
-            price = 600;
-        }else if((size === "small")&&(crust === "extra_crust")&&(toppings === "veggie")){
-            price = 700;
-        }else if((size === "small")&&(crust === "vegetarian")&&(toppings === "extra_tomato")){
-            price = 600;
-        }else if((size === "small")&&(crust === "vegetarian")&&(toppings === "extra_cheese")){
-            price = 700;
-        }else if((size === "small")&&(crust === "vegetarian")&&(toppings === "veggie")){
-            price = 800;
-        }else if((size === "small")&&(crust === "extra_crust")&&(toppings === "extra_tomato")){
-            price = 500;
-        }else if((size === "medium")&&(crust === "regular")&&(toppings === "extra_tomato")){
+        
+        }else if((size === "medium")&&(crust === "regular")){
+            price = 200;
+        
+        }else if((size === "medium")&&(crust === "extra_crust")){
             price = 400;
-        }else if((size === "medium")&&(crust === "regular")&&(toppings === "extra_cheese")){
+        
+        }else if((size === "medium")&&(crust === "vegetarian")){
             price = 500;
-        }else if((size === "medium")&&(crust === "regular")&&(toppings === "veggie")){
-            price = 600;
-        }else if((size === "medium")&&(crust === "extra_crust")&&(toppings === "extra_tomato")){
-            price = 600;
-        }else if((size === "medium")&&(crust === "extra_crust")&&(toppings === "extra_cheese")){
-            price = 700;
-        }else if((size === "medium")&&(crust === "extra_crust")&&(toppings === "veggie")){
-            price = 800;
-        }else if((size === "medium")&&(crust === "vegetarian")&&(toppings === "extra_tomato")){
-            price = 700;
-        }else if((size === "medium")&&(crust === "vegetarian")&&(toppings === "extra_cheese")){
-            price = 800;
-        }else if((size === "medium")&&(crust === "vegetarian")&&(toppings === "veggie")){
-            price = 900;
-        }else if((size === "medium")&&(crust === "extra_crust")&&(toppings === "extra_tomato")){
-            price = 600;
-        }else if((size === "large")&&(crust === "regular")&&(toppings === "extra_tomato")){
+        
+        }else if((size === "large")&&(crust === "regular")){
             price = 500;
 
-        }else if((size === "large")&&(crust === "regular")&&(toppings === "extra_cheese")){
+        }else if((size === "large")&&(crust === "regular")){
+            price = 300;
+        
+        }else if((size === "large")&&(crust === "extra_crust")){
+            price = 500;
+        
+        }else if((size === "large")&&(crust === "vegetarian")){
             price = 600;
-        }else if((size === "large")&&(crust === "regular")&&(toppings === "veggie")){
-            price = 700;
-        }else if((size === "large")&&(crust === "extra_crust")&&(toppings === "extra_tomato")){
-            price = 700;
-        }else if((size === "large")&&(crust === "extra_crust")&&(toppings === "extra_cheese")){
-            price = 800;
-        }else if((size === "large")&&(crust === "extra_crust")&&(toppings === "veggie")){
-            price = 900;
-        }else if((size === "large")&&(crust === "vegetarian")&&(toppings === "extra_tomato")){
-            price = 800;
-        }else if((size === "large")&&(crust === "vegetarian")&&(toppings === "extra_cheese")){
-            price = 900;
-        }else if((size === "large")&&(crust === "vegetarian")&&(toppings === "veggie")){
-            price = 1000;
-        }else if((size === "large")&&(crust === "extra_crust")&&(toppings === "extra_tomato")){
-            price = 700;
+
         }else{
             price = 0;
         }
 
+        $.each($("input[type='checkbox']:checked"), function(){
+            toppings += 200;
+        });
 
+        price += toppings;
+        cost = price * quantity;
         if(delivery === true){
-            price += 200;
+            cost += 200;
         }else{
-            price += 0;
+            cost += 0;
         }
-
-        return price * quantity;
+        
+        
+        return cost;
         
     }
 
