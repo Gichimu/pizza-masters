@@ -71,8 +71,7 @@ $(document).ready(function(){
         var crust = $("select#inputState2").val();
         var quantity = $("input#quantity").val();
         var toppings = "";
-        var price = 0;
-        var delivery = false;
+        
 
         if ($('#inlineCheckbox1').is(":checked"))
         {
@@ -85,6 +84,9 @@ $(document).ready(function(){
             toppings = "";
         }
 
+        var price = 0;
+        var delivery = false;
+
         if ($('#show_address').is(":checked"))
         {
             delivery = true;
@@ -94,7 +96,6 @@ $(document).ready(function(){
 
         if((size === "small")&&(crust === "regular")&&(toppings === "extra_tomato")){
             price = 300;
-
         }else if((size === "small")&&(crust === "regular")&&(toppings === "extra_cheese")){
             price = 400;
         }else if((size === "small")&&(crust === "regular")&&(toppings === "veggie")){
@@ -115,7 +116,6 @@ $(document).ready(function(){
             price = 500;
         }else if((size === "medium")&&(crust === "regular")&&(toppings === "extra_tomato")){
             price = 400;
-
         }else if((size === "medium")&&(crust === "regular")&&(toppings === "extra_cheese")){
             price = 500;
         }else if((size === "medium")&&(crust === "regular")&&(toppings === "veggie")){
@@ -157,7 +157,7 @@ $(document).ready(function(){
             price = 700;
         }else{
             price = 0;
-        }*/
+        }
 
 
         if(delivery === true){
