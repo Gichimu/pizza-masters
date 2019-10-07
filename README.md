@@ -18,7 +18,7 @@ The application was designed using HTML, CSS and Jquery.
 ## Support and contact details
 There are no known bugs, if any are encountered, please feel free to contact me on gichimueric12@gmail.com
 
-The live site is at 
-### License
-(https://github.com/Gichimu/pizza-masters/blob/master/LICENCE.md)
+The live site is at (https://gichimu.github.io/pizza-masters/)
+### License (https://github.com/Gichimu/pizza-masters/blob/master/LICENCE.md)
+
 Copyright (c) 2019 **Gichimu Eric**
