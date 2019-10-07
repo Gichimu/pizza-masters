@@ -43,22 +43,149 @@
                             <li>Vegetarian pizza.</li>
                         </ul>
                     <div class="text-center">
-                    <a href=""><button type="button" class="btn btn-lg btn-outline-primary">Find your taste</button></a>
+                        <button type="button" data-toggle="modal" data-target="#exampleModalCenter" class="btn btn-lg btn-outline-primary" id="btn1">Find your taste</button>
                     </div>
+                    
                 </div>
             </div>
         
         </div>
+        
         <div class="row">
             <footer>
                     <span class="fa-stack fa-lg">
-                            <i class="fa fa-camera fa-twitter"></i>
-                            <i class="fa fa-camera fa-facebook"></i>
-                            <i class="fa fa-camera fa-instagram"></i>
+                            <i class="fal fa-camera fa-twitter"></i>
+                            <i class="fal fa-camera fa-facebook"></i>
+                            <i class="fal fa-camera fa-instagram"></i>
                           </span>
 i            </footer>
         </div>
+      
     </div>
+  
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Please choose your pizza accompaniments..</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                
+              <form>
+                    <div class="form-group">
+                        <label for="inputState1">Size</label>
+                        <select id="inputState1" class="form-control">
+                        <option selected>Choose...</option>
+                        <option id="small">small</option>
+                        <option id="medium">medium</option>
+                        <option id="large">large</option>
+                        <option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputState2">Crust</label>
+                        <select id="inputState2" class="form-control">
+                        <option selected>Choose...</option>
+                        <option id="regular">regular</option>
+                        <option id="extra_crust">extra crust</option>
+                        <option id="vegetarian">Vegetarian</option>
+                        <option>
+                        </select>
+                    </div>
+                    <hr>
+                    <p class="text-center">Toppings</p>
+                    <div class="toppings">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="check" value="extra tomato">
+                            <label class="form-check-label" for="inlineCheckbox1">Extra tomato</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="check" value="extra cheese">
+                            <label class="form-check-label" for="inlineCheckbox2">Extra Cheese</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" name="check" value="veggie">
+                            <label class="form-check-label" for="inlineCheckbox3">Veggie</label>
+                        </div>
+                    </div>
+                    <hr >
+                    <p class="text-center">Would you like to have your pizza delivered to your location?</p>
+                    <div class="delivery">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="show_address" value="option1">
+                            <label class="form-check-label" for="inlineRadio1">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="no_address" value="option2">
+                            <label class="form-check-label" for="inlineRadio2">No</label>
+                        </div>
+                    </div>
+                    
+                    <div class="hidden" id="address">
+                            <hr>
+                        <form class="address"><!--inner form -->
+                            <p class="text-center">Please enter your location:</p>
+                            <div class="form-group">
+                                <select id="inputState3" class="form-control">
+                                    <option selected value="">select...</option>
+                                    <option value="langata">Lang'ata</option>
+                                    <option value="karen">Karen</option>
+                                    <option value="westlands">Westlands</option>
+                                    <option value="buruburu">Buruburu</option>
+                                    <option value="umoja">Umoja</option>
+                                    <option value="donholm">Donholm</option>
+                                    <option value="ngara">Ngara</option>
+                                    <option value="upperhill">Upperhill</option>
+                                    <option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="estate" aria-describedby="emailHelp" placeholder="estate">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="house_number" placeholder="house number">
+                            </div>
+                        </form> 
+                    </div>
+                    
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-dismiss="modal"  id="submit">Submit</button>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+      <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Checkout</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                <p id="message1"></p>
+                <hr>
+                <p id="message2"></p>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Checkout</button>
+                </div>
+            </div>
+            </div>
+        </div>
+      
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     
 </body>
 </html>
